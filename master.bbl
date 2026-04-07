@@ -1,0 +1,106 @@
+%apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (0) allowed
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{18}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{https://doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Kortelainen}\ \emph {et~al.}(2010)\citenamefont {Kortelainen}, \citenamefont {Lesinski}, \citenamefont {Mor\'e}, \citenamefont {Nazarewicz}, \citenamefont {Sarich}, \citenamefont {Schunck}, \citenamefont {Stoitsov},\ and\ \citenamefont {Wild}}]{unedf}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Kortelainen}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Lesinski}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Mor\'e}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Nazarewicz}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Sarich}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Schunck}}, \bibinfo {author} {\bibfnamefont {M.~V.}\ \bibnamefont {Stoitsov}},\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Wild}},\ }\bibfield  {title} {\bibinfo {title} {Nuclear energy density optimization},\ }\href {https://doi.org/10.1103/PhysRevC.82.024313} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. C}\ }\textbf {\bibinfo {volume} {82}},\ \bibinfo {pages} {024313} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chabanat}\ \emph {et~al.}(1997)\citenamefont {Chabanat}, \citenamefont {Bonche}, \citenamefont {Haensel}, \citenamefont {Meyer},\ and\ \citenamefont {Schaeffer}}]{chabanat1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Chabanat}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Bonche}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Haensel}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Meyer}},\ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Schaeffer}},\ }\bibfield  {title} {\bibinfo {title} {A skyrme parametrisation from subnuclear to neutron star densities},\ }\href {https://doi.org/https://doi.org/10.1016/S0375-9474(97)00596-4} {\bibfield  {journal} {\bibinfo  {journal} {Nuclear Physics A}\ }\textbf {\bibinfo {volume} {627}},\ \bibinfo {pages} {710} (\bibinfo {year} {1997})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chabanat}\ \emph {et~al.}(1998)\citenamefont {Chabanat}, \citenamefont {Bonche}, \citenamefont {Haensel}, \citenamefont {Meyer},\ and\ \citenamefont {Schaeffer}}]{chabanat2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Chabanat}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Bonche}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Haensel}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Meyer}},\ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Schaeffer}},\ }\bibfield  {title} {\bibinfo {title} {A skyrme parametrisation from subnuclear to neutron star densities part ii. nuclei far from stabilities},\ }\href {https://doi.org/https://doi.org/10.1016/S0375-9474(98)00180-8} {\bibfield  {journal} {\bibinfo  {journal} {Nuclear Physics A}\ }\textbf {\bibinfo {volume} {635}},\ \bibinfo {pages} {231} (\bibinfo {year} {1998})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Perli\ifmmode~\acute{n}\else \'{n}\fi{}ska}\ \emph {et~al.}(2004)\citenamefont {Perli\ifmmode~\acute{n}\else \'{n}\fi{}ska}, \citenamefont {Rohozi\ifmmode~\acute{n}\else \'{n}\fi{}ski}, \citenamefont {Dobaczewski},\ and\ \citenamefont {Nazarewicz}}]{conversions}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Perli\ifmmode~\acute{n}\else \'{n}\fi{}ska}}, \bibinfo {author} {\bibfnamefont {S.~G.}\ \bibnamefont {Rohozi\ifmmode~\acute{n}\else \'{n}\fi{}ski}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Dobaczewski}},\ and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Nazarewicz}},\ }\bibfield  {title} {\bibinfo {title} {Local density approximation for proton-neutron pairing correlations: Formalism},\ }\href {https://doi.org/10.1103/PhysRevC.69.014316} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. C}\ }\textbf {\bibinfo {volume} {69}},\ \bibinfo {pages} {014316} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gu}\ \emph {et~al.}(2013)\citenamefont {Gu}, \citenamefont {Liang}, \citenamefont {Long}, \citenamefont {Van~Giai},\ and\ \citenamefont {Meng}}]{SlaterApp}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.-Q.}\ \bibnamefont {Gu}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Liang}}, \bibinfo {author} {\bibfnamefont {W.~H.}\ \bibnamefont {Long}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Van~Giai}},\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Meng}},\ }\bibfield  {title} {\bibinfo {title} {Slater approximation for coulomb exchange effects in nuclear covariant density functional theory},\ }\href {https://doi.org/10.1103/PhysRevC.87.041301} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. C}\ }\textbf {\bibinfo {volume} {87}},\ \bibinfo {pages} {041301} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bender}\ \emph {et~al.}(2003)\citenamefont {Bender}, \citenamefont {Heenen},\ and\ \citenamefont {Reinhard}}]{Bender2003}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Bender}}, \bibinfo {author} {\bibfnamefont {P.-H.}\ \bibnamefont {Heenen}},\ and\ \bibinfo {author} {\bibfnamefont {P.-G.}\ \bibnamefont {Reinhard}},\ }\bibfield  {title} {\bibinfo {title} {Self-consistent mean-field models for nuclear structure},\ }\href {https://doi.org/10.1103/RevModPhys.75.121} {\bibfield  {journal} {\bibinfo  {journal} {Rev. Mod. Phys.}\ }\textbf {\bibinfo {volume} {75}},\ \bibinfo {pages} {121} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hellemans}\ \emph {et~al.}(2012)\citenamefont {Hellemans}, \citenamefont {Heenen},\ and\ \citenamefont {Bender}}]{cr8}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Hellemans}}, \bibinfo {author} {\bibfnamefont {P.-H.}\ \bibnamefont {Heenen}},\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Bender}},\ }\bibfield  {title} {\bibinfo {title} {Tensor part of the skyrme energy density functional. iii. time-odd terms at high spin},\ }\href {https://doi.org/10.1103/PhysRevC.85.014326} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. C}\ }\textbf {\bibinfo {volume} {85}},\ \bibinfo {pages} {014326} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Terasaki}\ \emph {et~al.}(1995)\citenamefont {Terasaki}, \citenamefont {Heenen}, \citenamefont {Bonche}, \citenamefont {Dobaczewski},\ and\ \citenamefont {Flocard}}]{TERASAKI19951}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Terasaki}}, \bibinfo {author} {\bibfnamefont {P.-H.}\ \bibnamefont {Heenen}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Bonche}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Dobaczewski}},\ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Flocard}},\ }\bibfield  {title} {\bibinfo {title} {Superdeformed rotational bands with density dependent pairing interactions},\ }\href {https://doi.org/https://doi.org/10.1016/0375-9474(95)00316-S} {\bibfield  {journal} {\bibinfo  {journal} {Nuclear Physics A}\ }\textbf {\bibinfo {volume} {593}},\ \bibinfo {pages} {1} (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gall}\ \emph {et~al.}(1994)\citenamefont {Gall}, \citenamefont {Bonche}, \citenamefont {Dobaczewski}, \citenamefont {Flocard},\ and\ \citenamefont {Heenen}}]{two_basis_hg_bands}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Gall}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Bonche}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Dobaczewski}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Flocard}},\ and\ \bibinfo {author} {\bibfnamefont {P.~H.}\ \bibnamefont {Heenen}},\ }\bibfield  {title} {\bibinfo {title} {Superdeformed rotational bands in the mercury region. a cranked skyrme-hartree-fock-bogoliubov study},\ }\href {https://doi.org/10.1007/BF01291916} {\bibfield  {journal} {\bibinfo  {journal} {Zeitschrift für Physik A Hadrons and Nuclei}\ }\textbf {\bibinfo {volume} {348}},\ \bibinfo {pages} {183} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Krieger}\ \emph {et~al.}(1990)\citenamefont {Krieger}, \citenamefont {Bonche}, \citenamefont {Flocard}, \citenamefont {Quentin},\ and\ \citenamefont {Weiss}}]{pairing_factors}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Krieger}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Bonche}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Flocard}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Quentin}},\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Weiss}},\ }\bibfield  {title} {\bibinfo {title} {An improved pairing interaction for mean field calculations using skyrme potentials*},\ }\href {https://doi.org/https://doi.org/10.1016/0375-9474(90)90035-K} {\bibfield  {journal} {\bibinfo  {journal} {Nuclear Physics A}\ }\textbf {\bibinfo {volume} {517}},\ \bibinfo {pages} {275} (\bibinfo {year} {1990})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zhou}(1993)}]{finite_diff}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.-b.}\ \bibnamefont {Zhou}},\ }\bibinfo {title} {Finite difference method},\ in\ \href {https://doi.org/10.1007/978-3-642-50319-1_3} {\emph {\bibinfo {booktitle} {Numerical Analysis of Electromagnetic Fields}}}\ (\bibinfo  {publisher} {Springer Berlin Heidelberg},\ \bibinfo {address} {Berlin, Heidelberg},\ \bibinfo {year} {1993})\ pp.\ \bibinfo {pages} {63--94}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ryssens}\ \emph {et~al.}(2015{\natexlab{a}})\citenamefont {Ryssens}, \citenamefont {Heenen},\ and\ \citenamefont {Bender}}]{ryssens_precision}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Ryssens}}, \bibinfo {author} {\bibfnamefont {P.-H.}\ \bibnamefont {Heenen}},\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Bender}},\ }\bibfield  {title} {\bibinfo {title} {Numerical accuracy of mean-field calculations in coordinate space},\ }\href {https://doi.org/10.1103/PhysRevC.92.064318} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. C}\ }\textbf {\bibinfo {volume} {92}},\ \bibinfo {pages} {064318} (\bibinfo {year} {2015}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ryssens}\ \emph {et~al.}(2019)\citenamefont {Ryssens}, \citenamefont {Bender},\ and\ \citenamefont {Heenen}}]{ryssens_numerical}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Ryssens}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Bender}},\ and\ \bibinfo {author} {\bibfnamefont {P.~H.}\ \bibnamefont {Heenen}},\ }\bibfield  {title} {\bibinfo {title} {Iterative approaches to the self-consistent nuclear energy density functional problem: Heavy ball dynamics and potential preconditioning},\ }\bibfield  {journal} {\bibinfo  {journal} {The European Physical Journal A}\ }\textbf {\bibinfo {volume} {55}},\ \href {https://doi.org/10.1140/epja/i2019-12766-6} {10.1140/epja/i2019-12766-6} (\bibinfo {year} {2019})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lin}\ \emph {et~al.}(2013)\citenamefont {Lin}, \citenamefont {Shao},\ and\ \citenamefont {E}}]{covariant_lobpcg}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Lin}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Shao}},\ and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {E}},\ }\bibfield  {title} {\bibinfo {title} {Efficient iterative method for solving the dirac-kohn--sham density functional theory},\ }\href {https://doi.org/https://doi.org/10.1016/j.jcp.2013.03.030} {\bibfield  {journal} {\bibinfo  {journal} {Journal of Computational Physics}\ }\textbf {\bibinfo {volume} {245}},\ \bibinfo {pages} {205} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Li}\ \emph {et~al.}(2020)\citenamefont {Li}, \citenamefont {Xie}, \citenamefont {Xu}, \citenamefont {You},\ and\ \citenamefont {Zhang}}]{gcg1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Li}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Xie}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Xu}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {You}},\ and\ \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Zhang}},\ }\bibfield  {title} {\bibinfo {title} {A parallel generalised conjugate gradient method for large scale eigenvalue problems},\ }\href {https://doi.org/10.1007/s42514-020-00029-6} {\bibfield  {journal} {\bibinfo  {journal} {CCF Transactions on High Performance Computing}\ }\textbf {\bibinfo {volume} {2}},\ \bibinfo {pages} {111} (\bibinfo {year} {2020})},\ \bibinfo {note} {the corresponding computing package can be downloaded from the web site: \url{https://github.com/pase2017/GCGE-1.0}.}\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Li}\ \emph {et~al.}(2023)\citenamefont {Li}, \citenamefont {Wang},\ and\ \citenamefont {Xie}}]{gcg2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Li}}, \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Wang}},\ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Xie}},\ }\bibfield  {title} {\bibinfo {title} {Gcge: a package for solving large scale eigenvalue problems by parallel block damping inverse power method},\ }\href {https://doi.org/10.1007/s42514-023-00135-1} {\bibfield  {journal} {\bibinfo  {journal} {CCF Transactions on High Performance Computing}\ }\textbf {\bibinfo {volume} {5}},\ \bibinfo {pages} {171} (\bibinfo {year} {2023})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Staszczak}\ \emph {et~al.}(2010)\citenamefont {Staszczak}, \citenamefont {Stoitsov}, \citenamefont {Baran},\ and\ \citenamefont {Nazarewicz}}]{ALM}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Staszczak}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Stoitsov}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Baran}},\ and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Nazarewicz}},\ }\bibfield  {title} {\bibinfo {title} {Augmented lagrangian method for constrained nuclear density functional theory},\ }\href {https://doi.org/10.1140/epja/i2010-11018-9} {\bibfield  {journal} {\bibinfo  {journal} {The European Physical Journal A}\ }\textbf {\bibinfo {volume} {46}},\ \bibinfo {pages} {85} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ryssens}\ \emph {et~al.}(2015{\natexlab{b}})\citenamefont {Ryssens}, \citenamefont {Hellemans}, \citenamefont {Bender},\ and\ \citenamefont {Heenen}}]{ev8}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Ryssens}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Hellemans}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Bender}},\ and\ \bibinfo {author} {\bibfnamefont {P.-H.}\ \bibnamefont {Heenen}},\ }\bibfield  {title} {\bibinfo {title} {Solution of the skyrme hf+bcs equation on a 3d mesh. ii. a new version of the ev8 code},\ }\href {https://doi.org/10.1016/j.cpc.2014.10.001} {\bibfield  {journal} {\bibinfo  {journal} {Computer Physics Communications}\ }\textbf {\bibinfo {volume} {187}},\ \bibinfo {pages} {175} (\bibinfo {year} {2015}{\natexlab{b}})}\BibitemShut {NoStop}%
+\end{thebibliography}%
