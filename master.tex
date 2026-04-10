@@ -152,9 +152,9 @@ This equates to a renormalization of the nucleon mass, which then takes the form
   m\to m\frac{A}{A-1}.
 \end{equation}
 \subsubsection{Coulomb energy}
-The Coulomb energy is treated withing the Local Density Approximation. The resulting energy density reads~\cite{SlaterApp}
+The Coulomb energy is treated within the Local Density Approximation. The resulting energy density reads~\cite{SlaterApp}
 \begin{align}
-    \mathcal E_\text{Coul} &=\mathcal E_{\text{Coul, D}}+\mathcal{E}_\text{Coul, E} \\&=\frac{e^2}{2}\bigg[\int  \frac{\rho_p(\bm r )\rho_p(\bm r ' )}{\|\bm r-\bm r'\|}d\bm r'  - \frac 3 2 \bigg(\frac 3 \pi \bigg) ^{\frac 1 3}\rho_p^{4/3}(\bm r)\bigg].\nonumber
+    \mathcal E_\text{Coul} &=\mathcal E_{\text{Coul, D}}+\mathcal{E}_\text{Coul, E} \\&=\frac{e^2}{2}\bigg[\int  \frac{\rho_p(\bm r )\rho_p(\bm r ' )}{|\bm r-\bm r'|}d\bm r'  - \frac 3 2 \bigg(\frac 3 \pi \bigg) ^{\frac 1 3}\rho_p^{4/3}(\bm r)\bigg].\nonumber
 \end{align}
 
 \subsubsection{Pairing energy}
@@ -164,7 +164,7 @@ The pairing interaction is assumed to be different from the particle-hole one, a
 \end{equation}
 which can be casted on a pairing density matrix that reads
 \begin{equation}
-\tilde\rho_q(\bm r \sigma, \bm r'\sigma')=-\sigma'\kappa_q(\bm r \sigma, \bm r'\sigma').
+\tilde\rho_q(\bm r \sigma, \bm r'\sigma')=-2\sigma'\kappa_q(\bm r \sigma, \bm r'\sigma').
 \end{equation}
 The local pairing density finally reads 
 \begin{equation}
@@ -213,16 +213,16 @@ which yields the HF basis $\ket{\phi_k}$. We can then compute the local pairing 
 \begin{equation}
   \tilde\rho_q(\bm r) = \sum_{\sigma=\pm 1}\kappa_{ij}f_i f_j\phi_i(\bm r\sigma)\phi_j(\bm r -\sigma),
 \end{equation}
-where $f_i,f_j$ are factors used to restrict the pairing interaction near the Fermi surface. To avoid sudden changes in the considered states, the factors used are the ones proposed in Ref.~\cite{pairing_factors}, which read
+The pairing gaps in this basis are then computed as
+\begin{equation}
+\Delta_{ij}=\sum_{\sigma=\pm 1}\int d\bm r \frac{V_q} 2 \bigg[1-\eta\frac{\rho_0(\bm r )}{\rho_s}\bigg]\phi_i(\bm r \sigma)\phi_j(\bm r -\sigma)f_i f_j.
+\end{equation}
+The $f_i,f_j$ factors are used to regularize the pairing interaction, as $\mathcal E_\text{Pair}$ is local in the pairing density it implies constant coupling in momentum space. To avoid sudden changes in the states considered, the factors used are the ones proposed in Ref.~\cite{pairing_factors}, which read
 \begin{equation}
   \nonumber
   f_i = \bigg[\frac 1 {1+e^{(\varepsilon_i-\lambda_q-\Delta\varepsilon_q)/\mu_q}}\cdot\frac 1 {1+e^{(-\varepsilon_i+\lambda_q-\Delta\varepsilon_q)/\mu_q}}\bigg]^{1/2},
 \end{equation}
 where $\Delta\varepsilon_q$ is the pairing window and $\mu_q$ is a factor which controls the sharpness of the window.
-The pairing gaps in this basis are then computed as
-\begin{equation}
-\Delta_{ij}=\sum_{\sigma=\pm 1}\int d\bm r \frac{V_q} 4 \bigg[1-\eta\frac{\rho_0(\bm r )}{\rho_s}\bigg]\phi_i(\bm r \sigma)\phi_j(\bm r -\sigma).
-\end{equation}
 After diagonalizing the HFB Hamiltonian in this basis, the density matrix and the pairing tensor are computed as
 \begin{equation}
 \rho = V^*V^T,\quad \kappa = U^*V^T.
@@ -236,16 +236,39 @@ The canonical basis, in the HF basis thus reads
   \ket{\psi_i} = \sum_{k}S_{ki} \ket{\phi_k}.
 \end{equation}
 
-
+\subsection{The Lipkin-Nogami method}
+The Lipking-Nogami method (LN)~\cite{Lipkin1960} is an approximate variation after projection of the particle number. In this framework the total energy of the system becomes
+\begin{equation}
+E[\rho, \kappa]\mapsto E[\rho, \kappa] -\lambda_2 (\expval{N^2}-\expval{N}^2).\label{eq:LN}
+\end{equation}
+The calculation of $\lambda_2$ is carried out at each iteration using the prescription~\cite{Stoitsov2007, Stoitsov2003}:
+\begin{equation}
+  \lambda_2=\frac{G_\text{eff}}{4}\frac{\Tr{(1-\rho)\kappa}\Tr{\rho\kappa}-2\Tr{(1-\rho)^2 \rho^2}}{[\Tr(1-\rho)]^2-2\Tr\rho^2(1-\rho)^2},
+\end{equation}
+where $G_\text{eff}$ is set to
+\begin{equation}
+  G_\text{eff}=-\frac{\bar\Delta^2}{E_\text{pair}}.
+\end{equation}
+Here, $\bar\Delta$ is the average pairing gap, computed as
+\begin{equation}
+  \bar\Delta = \frac{\Tr{\Delta\rho}}{\Tr\rho}.
+\end{equation}
+This phenomenological choice avoids the costly evaluation of the fields, which depends on the specific pairing interaction employed.
+On top of an approximate particle projection (before variation), the Lipkin-Nogami method introduces a curvature in the energy surface which prevents pairing collapse. This is important in deformed calculations, as certain spatial configurations along iterations may result in the trivial solution $\Delta = 0$, which is not recoverable in an HFB calculation.
+The substitution in~\eqref{eq:LN} modifies the HFB matrix~\eqref{eq:HFB}. Different choices can be made, depending on which expression for the particle dispersion is used~\cite{two_basis_hg_bands}. In this work, the choice 
+\begin{equation}
+  h\mapsto h-2\lambda_2(1-2\rho)
+\end{equation}
+is used.
 \section{Numerical treatment}
 \subsection{Numerical derivatives}
-Derivatives at each iteration are computed, with the nine points finite difference scheme~\cite{finite_diff}. The single-particle Hamiltonian $h$ is discretized with a five point scheme. Following the results in~\cite{ryssens_precision}, we employ the strategy of recalculating the energy at convergence using Lagrange derivatives. 
+Derivatives at each iteration are computed using the lagrange mesh scheme~\cite{ryssens_precision}. This enables reaching very high accuracies even for very modest meshes and guarantees that the method is variational. The single-particle Hamiltonian $h$ is discretized with a five point scheme~\cite{finite_diff}.
 
 \subsection{\label{sec:gcg}Implementation of the GCG method}
-The minimization of the energy functional on a cartesian mesh by repeated diagonalization of the single-particle Hamiltonian $h$ is unfeasible. Even very modest discretizations lead to large-scale matrices which cannot be diagonlized exactly in reasonable CPU times. There exists a wide range of methods that can be employed for this kind of problem. One promising technique is the use of preconditioned gradient descent~\cite{ryssens_numerical, covariant_lobpcg}. In this work we implement an algorithm based on the Generalized Conjugate Gradient (GCG) method~\cite{gcg1, gcg2}.
+The minimization of the energy functional on a cartesian mesh by repeated diagonalization of the single-particle Hamiltonian $h$ is unfeasible. Even very modest discretizations lead to large-scale matrices which cannot be diagonlized exactly in reasonable CPU times. There exists a wide range of methods that can be employed for this kind of problem. One promising technique is the use of the preconditioned gradient descent~\cite{ryssens_numerical, covariant_lobpcg}. In this work we implement an algorithm based on the Generalized Conjugate Gradient (GCG) method~\cite{gcg1, gcg2}.
 
 \subsubsection{Algorithm}
-The method starts from a set of guess single-particle wavefunctions $\{\phi_k^{(0)}\}$ and iteratively updates them until some convergence criteria is satisfied.
+The method starts from a set of $N_b$ guess single-particle wavefunctions $\{\phi_k^{(0)}\}$ and iteratively updates them until some convergence criteria is satisfied.
 
 At iteration $(i)$ of the procedure, a block $W$ is constructed by an application of the inverse single-particle hamiltonian $h^{(i)}$, approximately solving the linear system
 \begin{equation}
@@ -273,8 +296,18 @@ The new eigenvectors $\{\phi_k^{(i+1)}\}$ are the ones corresponding to the lowe
   \phi_k^{(i+1)} = \sum_{j=1}^{N_b} \phi_j^{(i)}C_{kj}.
 \end{equation}
 
+\subsubsection{Comparison with other algorithms}
+As shown in Fig.~\ref{fig:conv_comp} GCG performs better when compared with the very similar counterpart LOBPCG~\cite{lobpcg}. It is not only faster, but more robust and stable as well, while maintaining an identical computational effort. Moreover, a filtering operator is not necessary when varitional collapse is a problem, e.g.~in the covariant case~\cite{covariant_lobpcg} or the self-consistent solution of the HFB matrix by minimization~\cite{hfb_ihm}. Additionally, no search for an optimal preconditioner is needed, as the single-particle matrix is used in the inverse step.
+
+Another interesting comparison can be done with the Imaginary Time Evolution (ITE) method, used for example by the Skyrme code EV8~\cite{ev8}. While the computational overhead of ITE is very light, requiring only a matrix application and an orthonormalization of the eigenvectors, the execution time is dominated by the recalculation of the derivatives, blowing up the execution time: 159 s against the 21 s required by GCG.
+\begin{figure}[ht]
+  \includegraphics[ width=\columnwidth]{figures/conv_comp}
+  \caption{Convergence of the total energy with three different algorithms. $^{40}$Ca using SLy5. $\Delta E^ { (i)} =| E^{(i)}-  E^{(i-1)}|/| E^{(i)}|$. }
+  \label{fig:conv_comp}
+\end{figure}
+
 \subsection{\label{sec:alm}Spatial constraints}
-TSpatial constraints are implemented in this work by using the Augmented Lagrangian Method~\cite{ALM}, which minimizes the Routhian
+Spatial constraints are implemented in this work by using the Augmented Lagrangian Method~\cite{ALM}, which minimizes the Routhian
 \begin{equation}
 E' = E + \lambda^{(i)} (\langle Q \rangle-q) + \frac c 2 (\langle Q\rangle -q)^2,
 \end{equation}
@@ -283,6 +316,27 @@ where $Q$ is a multipole operator, $q$ a target value for said operator, and  $\
     \lambda^{(i+1)} = \lambda^{(i)}+\mu c (\langle Q\rangle -q),
 \end{equation}
 where $\mu\approx 0.05$ is a constant used to damp oscillations of the constraint field~\cite{ev8}.
+
+\subsection{Particle number constraint}
+The lagrange multiplier $\lambda$ in~\eqref{eq:HFB} is used to fix the particle number average $\expval{N}$. It is determined during the diagonalization of the HFB matrix using a bisection algorithm.
+This can be done by first determining a bracketing interval $[\lambda_\text{min}, \lambda_\text{max}]$ in which the correct value of $\lambda$ shall lie. The bisection algorithm then proceeds as follows:
+(a) Diagonalize the HFB matrix 
+\begin{equation}
+\begin{pmatrix}
+  h - \lambda^{(j)} & \Delta \\ -\Delta^* & -(h-\lambda^{(j)})
+\end{pmatrix}
+\begin{pmatrix}
+  U_\mu \\ V_\mu
+\end{pmatrix}^{(j)}
+=E_\mu \begin{pmatrix}
+  U_\mu \\ V_\mu
+\end{pmatrix}^{(j)};
+\end{equation}
+(b) determine the particle number $\expval{N}^{(j)}$;
+(c) if $\expval{N}^{(j)} < A$, set $\lambda_\text{min} = \lambda^{(j)}$; otherwise set $\lambda_\text{max} = \lambda^{(j)}$;
+(d) set $\lambda^{(j+1)} = (\lambda_\text{min} + \lambda_\text{max})/2$. Repeat until convergence.
+
+The superscript $(j)$ is used to avoid confusion between the outer mean-field iterations $(i)$ and the bisection iterations $(j)$. During the bisection algorithm, only the $\lambda^{(j)}$ value is updated, for which a new quasiparticle basis is obtained.
 
 \appendix
 \begin{tikzpicture}[
@@ -382,6 +436,7 @@ If constraints are present, the constraint field reads
 \begin{equation}
   U_\text{Constr} = \lambda^{(i)} Q + c(\expval Q-q)Q.
 \end{equation}
+\newpage
 
 %\section{Energy calculation}
 %The nucleus energy can be computed in two ways. The trivial way is to evaluate the functional

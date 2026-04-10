@@ -24,28 +24,40 @@
 \newlabel{eq:HFB}{{20}{2}{}{}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Mean-field Hamiltonian}{2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {C}Two-basis method}{2}{}}
-\citation{finite_diff}
+\citation{Lipkin1960}
+\citation{Stoitsov2007,Stoitsov2003}
+\citation{two_basis_hg_bands}
 \citation{ryssens_precision}
+\citation{finite_diff}
 \citation{ryssens_numerical,covariant_lobpcg}
 \citation{gcg1,gcg2}
-\citation{ALM}
-\citation{ev8}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D}The Lipkin-Nogami method}{3}{}}
+\newlabel{eq:LN}{{29}{3}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Numerical treatment}{3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {A}Numerical derivatives}{3}{}}
 \newlabel{sec:gcg}{{II\,B}{3}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {B}Implementation of the GCG method}{3}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Algorithm}{3}{}}
-\newlabel{sec:alm}{{II\,C}{3}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {C}Spatial constraints}{3}{}}
+\citation{lobpcg}
+\citation{covariant_lobpcg}
+\citation{hfb_ihm}
+\citation{ev8}
+\citation{ALM}
+\citation{ev8}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Comparison with other algorithms}{4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Convergence of the total energy with three different algorithms. $^{40}$Ca using SLy5. $\Delta E^ { (i)} =| E^{(i)}- E^{(i-1)}|/| E^{(i)}|$. }}{4}{}}
+\newlabel{fig:conv_comp}{{1}{4}{}{}{}}
+\newlabel{sec:alm}{{II\,C}{4}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C}Spatial constraints}{4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D}Particle number constraint}{4}{}}
 \@writefile{toc}{\appendix }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Local densities and fields}{5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Mean-field}{5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1}Coulomb field}{5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2}Constraint field}{5}{}}
 \citation{*}
 \bibdata{masterNotes,bibliography}
 \bibcite{unedf}{{1}{2010}{{Kortelainen\ \emph  {et~al.}}}{{Kortelainen, Lesinski, Mor\'e, Nazarewicz, Sarich, Schunck, Stoitsov,\ and\ Wild}}}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Local densities and fields}{4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {B}Mean-field}{4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1}Coulomb field}{4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2}Constraint field}{4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}References}{4}{}}
 \bibcite{chabanat1}{{2}{1997}{{Chabanat\ \emph  {et~al.}}}{{Chabanat, Bonche, Haensel, Meyer,\ and\ Schaeffer}}}
 \bibcite{chabanat2}{{3}{1998}{{Chabanat\ \emph  {et~al.}}}{{Chabanat, Bonche, Haensel, Meyer,\ and\ Schaeffer}}}
 \bibcite{conversions}{{4}{2004}{{Perli\'{n}{}ska\ \emph  {et~al.}}}{{Perli\'{n}{}ska, Rohozi\'{n}{}ski, Dobaczewski,\ and\ Nazarewicz}}}
@@ -55,17 +67,23 @@
 \bibcite{TERASAKI19951}{{8}{1995}{{Terasaki\ \emph  {et~al.}}}{{Terasaki, Heenen, Bonche, Dobaczewski,\ and\ Flocard}}}
 \bibcite{two_basis_hg_bands}{{9}{1994}{{Gall\ \emph  {et~al.}}}{{Gall, Bonche, Dobaczewski, Flocard,\ and\ Heenen}}}
 \bibcite{pairing_factors}{{10}{1990}{{Krieger\ \emph  {et~al.}}}{{Krieger, Bonche, Flocard, Quentin,\ and\ Weiss}}}
-\bibcite{finite_diff}{{11}{1993}{{Zhou}}{{}}}
-\bibcite{ryssens_precision}{{12}{2015{}}{{Ryssens\ \emph  {et~al.}}}{{Ryssens, Heenen,\ and\ Bender}}}
-\bibcite{ryssens_numerical}{{13}{2019}{{Ryssens\ \emph  {et~al.}}}{{Ryssens, Bender,\ and\ Heenen}}}
-\bibcite{covariant_lobpcg}{{14}{2013}{{Lin\ \emph  {et~al.}}}{{Lin, Shao,\ and\ E}}}
-\bibcite{gcg1}{{15}{2020}{{Li\ \emph  {et~al.}}}{{Li, Xie, Xu, You,\ and\ Zhang}}}
-\bibcite{gcg2}{{16}{2023}{{Li\ \emph  {et~al.}}}{{Li, Wang,\ and\ Xie}}}
-\bibcite{ALM}{{17}{2010}{{Staszczak\ \emph  {et~al.}}}{{Staszczak, Stoitsov, Baran,\ and\ Nazarewicz}}}
-\bibcite{ev8}{{18}{2015{}}{{Ryssens\ \emph  {et~al.}}}{{Ryssens, Hellemans, Bender,\ and\ Heenen}}}
+\bibcite{Lipkin1960}{{11}{1960}{{Lipkin}}{{}}}
+\bibcite{Stoitsov2007}{{12}{2007}{{Stoitsov\ \emph  {et~al.}}}{{Stoitsov, Dobaczewski, Kirchner, Nazarewicz,\ and\ Terasaki}}}
+\bibcite{Stoitsov2003}{{13}{2003}{{Stoitsov\ \emph  {et~al.}}}{{Stoitsov, Dobaczewski, Nazarewicz, Pittel,\ and\ Dean}}}
+\bibcite{ryssens_precision}{{14}{2015{}}{{Ryssens\ \emph  {et~al.}}}{{Ryssens, Heenen,\ and\ Bender}}}
+\bibcite{finite_diff}{{15}{1993}{{Zhou}}{{}}}
+\bibcite{ryssens_numerical}{{16}{2019}{{Ryssens\ \emph  {et~al.}}}{{Ryssens, Bender,\ and\ Heenen}}}
+\bibcite{covariant_lobpcg}{{17}{2013}{{Lin\ \emph  {et~al.}}}{{Lin, Shao,\ and\ E}}}
+\bibcite{gcg1}{{18}{2020}{{Li\ \emph  {et~al.}}}{{Li, Xie, Xu, You,\ and\ Zhang}}}
+\bibcite{gcg2}{{19}{2023}{{Li\ \emph  {et~al.}}}{{Li, Wang,\ and\ Xie}}}
+\bibcite{lobpcg}{{20}{2018}{{Duersch\ \emph  {et~al.}}}{{Duersch, Shao, Yang,\ and\ Gu}}}
+\bibcite{hfb_ihm}{{21}{2013}{{Tanimura\ \emph  {et~al.}}}{{Tanimura, Hagino,\ and\ Ring}}}
+\bibcite{ev8}{{22}{2015{}}{{Ryssens\ \emph  {et~al.}}}{{Ryssens, Hellemans, Bender,\ and\ Heenen}}}
+\bibcite{ALM}{{23}{2010}{{Staszczak\ \emph  {et~al.}}}{{Staszczak, Stoitsov, Baran,\ and\ Nazarewicz}}}
 \bibstyle{apsrev4-2}
 \citation{REVTEX42Control}
 \citation{apsrev42Control}
-\newlabel{LastBibItem}{{18}{5}{}{}{}}
-\newlabel{LastPage}{{}{5}{}{}{}}
-\gdef \@abspage@last{5}
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{6}{}}
+\newlabel{LastBibItem}{{23}{6}{}{}{}}
+\newlabel{LastPage}{{}{6}{}{}{}}
+\gdef \@abspage@last{6}
