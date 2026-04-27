@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex master"] 1775807791.58736 "master.aux" "master.bbl" "master" 1775807869.84696 0
+["bibtex master"] 1775809281.36876 "master.aux" "master.bbl" "master" 1776341063.08192 0
   "./bibliography.bib" 1775807789.66588 16076 c9cd6bf2510e51dcb056322302abdbfc ""
-  "./masterNotes.bib" 1775807869.62576 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
+  "./masterNotes.bib" 1776341062.90451 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/revtex/apsrev4-2.bst" 1601932770 69609 e9dea59f0e753ccda3ddc8f5806d846d ""
-  "master.aux" 1775807869.62576 5862 b21cf2eac605b6eeca909aec9a3d7e2c "pdflatex"
+  "master.aux" 1776341062.90451 5965 c5b713c7ae2b314c8fe1fbff8d3999b3 "pdflatex"
   (generated)
   "master.bbl"
   "master.blg"
   (rewritten before read)
-["pdflatex"] 1775807869.05416 "/home/ale/Documents/Uni/Articolo/detailed_article/master.tex" "master.pdf" "master" 1775807869.84715 0
-  "/home/ale/Documents/Uni/Articolo/detailed_article/master.tex" 1775807868.80476 25185 35996bd3022c06e38978c48546099fbb ""
+["pdflatex"] 1776341062.56376 "/home/ale/Documents/Uni/Articolo/detailed_article/master.tex" "master.pdf" "master" 1776341063.08208 0
+  "/home/ale/Documents/Uni/Articolo/detailed_article/master.tex" 1776341062.39851 24875 31534e13ca3cbf2c0937f325142feef2 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -183,9 +183,9 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1770463074.65758 4547823 614eba97e0451aad345770236b030e55 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1770462836 7753933 f83f4f0bbe00029b91a7579857e99bcc ""
   "figures/conv_comp.pdf" 1775728295.74134 16640 70156daff6fb22e1ee01df5091adc3fc ""
-  "master.aux" 1775807869.62576 5862 b21cf2eac605b6eeca909aec9a3d7e2c "pdflatex"
-  "master.bbl" 1775807791.63788 21410 4ef8414c98cdc5fa0663998d06111cc9 "bibtex master"
-  "master.tex" 1775807868.80476 25185 35996bd3022c06e38978c48546099fbb ""
+  "master.aux" 1776341062.90451 5965 c5b713c7ae2b314c8fe1fbff8d3999b3 "pdflatex"
+  "master.bbl" 1775809281.42116 21410 4ef8414c98cdc5fa0663998d06111cc9 "bibtex master"
+  "master.tex" 1776341062.39851 24875 31534e13ca3cbf2c0937f325142feef2 ""
   (generated)
   "master.aux"
   "master.log"

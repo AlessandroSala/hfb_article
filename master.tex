@@ -94,7 +94,7 @@ covered at length in the main body of the article.
 %\tableofcontents
 
 \section{\label{sec:level1}Theoretical framework}
-In this section, the energy density funcitonal (EDF) employed is outlined.
+In this section, the energy density functional (EDF) employed is outlined.
 \subsection{Skyrme EDF}
 The total energy of the system can be expressed using an EDF by accounting for five different contributions:
 \begin{align}
@@ -164,7 +164,7 @@ The pairing interaction is assumed to be different from the particle-hole one, a
 \end{equation}
 which can be casted on a pairing density matrix that reads
 \begin{equation}
-\tilde\rho_q(\bm r \sigma, \bm r'\sigma')=-2\sigma'\kappa_q(\bm r \sigma, \bm r'\sigma').
+\tilde\rho_q(\bm r \sigma, \bm r'\sigma')=-\sigma'\kappa_q(\bm r \sigma, \bm r'-\sigma').
 \end{equation}
 The local pairing density finally reads 
 \begin{equation}
@@ -318,9 +318,10 @@ where $Q$ is a multipole operator, $q$ a target value for said operator, and  $\
 where $\mu\approx 0.05$ is a constant used to damp oscillations of the constraint field~\cite{ev8}.
 
 \subsection{Particle number constraint}
-The lagrange multiplier $\lambda$ in~\eqref{eq:HFB} is used to fix the particle number average $\expval{N}$. It is determined during the diagonalization of the HFB matrix using a bisection algorithm.
+The Lagrange multiplier $\lambda$ in~\eqref{eq:HFB} is used to fix the particle number average $\expval{N}$. It is determined during the diagonalization of the HFB matrix using a bisection algorithm.
 This can be done by first determining a bracketing interval $[\lambda_\text{min}, \lambda_\text{max}]$ in which the correct value of $\lambda$ shall lie. The bisection algorithm then proceeds as follows:
-(a) Diagonalize the HFB matrix 
+\begin{enumerate}
+\item Diagonalize the HFB matrix 
 \begin{equation}
 \begin{pmatrix}
   h - \lambda^{(j)} & \Delta \\ -\Delta^* & -(h-\lambda^{(j)})
@@ -332,54 +333,25 @@ This can be done by first determining a bracketing interval $[\lambda_\text{min}
   U_\mu \\ V_\mu
 \end{pmatrix}^{(j)};
 \end{equation}
-(b) determine the particle number $\expval{N}^{(j)}$;
-(c) if $\expval{N}^{(j)} < A$, set $\lambda_\text{min} = \lambda^{(j)}$; otherwise set $\lambda_\text{max} = \lambda^{(j)}$;
-(d) set $\lambda^{(j+1)} = (\lambda_\text{min} + \lambda_\text{max})/2$. Repeat until convergence.
+\item determine the particle number $\expval{N}^{(j)}$;
+\item if $\expval{N}^{(j)} < A$, set $\lambda_\text{min} = \lambda^{(j)}$; otherwise set $\lambda_\text{max} = \lambda^{(j)}$;
+\item set $\lambda^{(j+1)} = (\lambda_\text{min} + \lambda_\text{max})/2$. Repeat until convergence.
+\end{enumerate}
 
-The superscript $(j)$ is used to avoid confusion between the outer mean-field iterations $(i)$ and the bisection iterations $(j)$. During the bisection algorithm, only the $\lambda^{(j)}$ value is updated, for which a new quasiparticle basis is obtained.
+The superscript $(j)$ is used to avoid confusion between the outer mean-field iterations $(i)$ and the bisection iterations $(j)$. During the bisection algorithm, only the $\lambda^{(j)}$ value is updated, for which a new quasiparticle basis is obtained. All other quantities, included $\lambda_2$ are maintained fixed as to prevent ill-defined convergence of the algorithm.
 
+\subsubsection{Self-consistent procedure summary}
+\begin{enumerate}
+  \item Find an initial guess $\{{\phi_k^{(0)}\}}$ for the single-particle wavefunctions from a Woods-Saxon potential;
+  \item Until convergence:
+  \begin{enumerate}
+    \item Obtain $\{{\phi_k^{(i+1)}\}}$ by evolving the wavefunctions $\{{\phi_k^{(i)}\}}$ with a GCG step using $h^{(i)}$;
+    \item Diagonalize $\mathcal H_\text{HFB}$ to obtain $\rho,\kappa$;
+    \item Compute densities $\rho^{(i+1)},\tau^{(i+1)},\ldots$ and build $h^{(i+1)}$;
+  \end{enumerate}
+  \item Compute observables, exit.
+\end{enumerate}
 \appendix
-\begin{tikzpicture}[
-    box/.style={
-        draw,
-        rounded corners=6pt,
-        thick,
-        align=center,
-        text width=\linewidth-15mm,
-        inner sep=3pt,
-        minimum height=1.6cm
-    },
-    arrow/.style={
-        -{Triangle[length=5pt,width=5pt]},
-        thick
-    }
-]
-
-\node[box] (diag) {
-    \textbf{Mean-field iteration}\\
-    Diagonalize ${h}^{(i)}$; obtain $\ket{\phi_l^{(i+1)}}$.
-};
-
-\node[box, below=1.2cm of diag] (pair) {
-    \textbf{Pairing problem}\\
-    Diagonalize $\mathcal H_\text{HFB}$ until $\langle\mathcal N\rangle=A$; Obtain quasiparticle basis $(U_\mu, V_\mu)^T$.
-};
-
-\node[box, below=1.2cm of pair] (scf) {
-    \textbf{Densities, fields}\\
-    Build the new densities $\rho^{(i+1)}(\bm r)$, $\tilde \rho^{(i+1)} (\bm r)$, \ldots Construct new fields to obtain $h^{(i+1)}$.
-};
-
-% vertical arrows
-\draw[arrow] (diag) -- (pair);
-\draw[arrow] (pair) -- (scf);
-
-% compact feedback loop, fully inside column and centered
-\draw[arrow]
-    (scf.east) -- ++(8mm,0)
-               |- (diag.east);
-
-\end{tikzpicture}
 \section{Local densities and fields}
 We report here the formulae for the local densities in coordinate space
 \begin{align}
